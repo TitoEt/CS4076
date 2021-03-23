@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_xml_version_1_0_encoding_UTF_8_ui_version_4_0_class_MainWindow_class_widget_class_QMainWindow_name_MainWindow_property_name_geometry_rect_x_0_x_y_0_y_width_618_width_height_297_height_rect_property_property_name_sizePolicy_sizepolicy_hsizetype_Fixed_vsizetype_Fixed_horstretch_0_horstretch_verstretch_0_verstretch_sizepolicy_property_property_name_windowTitle_string_MainWindow_string_property_property_name_autoFillBackground_bool_true_bool_property_widget_class_QWidget_name_centralWidget_widget_class_QTextEdit_name_textEdit_property_name_geometry_rect_x_10_x_y_10_y_width_321_width_height_191_height_rect_property_property_name_readOnly_bool_true_bool_property_widget_widget_class_QPushButton_name_pushButton_property_name_geometry_rect_x_50_x_y_250_y_width_51_width_height_41_height_rect_property_property_name_text_string_South_string_property_widget_widget_class_QPushButton_name_pushButton_2_property_name_geometry_rect_x_10_x_y_210_y_width_41_width_height_81_height_rect_property_property_name_text_string_West_string_property_widget_widget_class_QPushButton_name_pushButton_3_property_name_geometry_rect_x_50_x_y_210_y_width_51_width_height_41_height_rect_property_property_name_autoFillBackground_bool_false_bool_property_property_name_text_string_North_string_property_widget_widget_class_QPushButton_name_pushButton_5_property_name_geometry_rect_x_150_x_y_210_y_width_51_width_height_81_height_rect_property_property_name_text_string_Teleport_string_property_widget_widget_class_QPushButton_name_pushButton_4_property_name_geometry_rect_x_100_x_y_210_y_width_41_width_height_81_height_rect_property_property_name_text_string_East_string_property_widget_widget_class_QPushButton_name_pushButton_7_property_name_geometry_rect_x_270_x_y_250_y_width_61_width_height_41_height_rect_property_property_name_text_string_Help_string_property_widget_widget_class_QPushButton_name_pushButton_8_property_name_geometry_rect_x_210_x_y_250_y_width_61_width_height_41_height_rect_property_property_name_text_string_View_Map_string_property_widget_widget_class_QPushButton_name_pushButton_6_property_name_geometry_rect_x_210_x_y_210_y_width_121_width_height_41_height_rect_property_property_name_text_string_View_Character_Info_string_property_widget_widget_class_QPushButton_name_pushButton_9_property_name_geometry_rect_x_340_x_y_210_y_width_261_width_height_41_height_rect_property_property_name_text_string_View_Room_Items_double_click_to_pick_up_the_Item_string_property_widget_widget_class_QPushButton_name_pushButton_10_property_name_geometry_rect_x_340_x_y_250_y_width_261_width_height_41_height_rect_property_property_name_text_string_View_Character_Items_double_click_to_drop_the_items_string_property_widget_widget_class_QListWidget_name_listWidget_property_name_geometry_rect_x_340_x_y_80_y_width_261_width_height_121_height_rect_property_widget_widget_class_QTextEdit_name_textEdit_2_property_name_geometry_rect_x_480_x_y_10_y_width_121_width_height_61_height_rect_property_property_name_readOnly_bool_true_bool_property_widget_widget_class_QTextEdit_name_textEdit_3_property_name_geometry_rect_x_340_x_y_10_y_width_121_width_height_61_height_rect_property_property_name_readOnly_bool_true_bool_property_widget_widget_widget_layoutdefault_spacing_6_margin_11_resources_connections_ui">
+    <property name="title">
+     <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+ &lt;class&gt;MainWindow&lt;/class&gt;
+ &lt;widget class=&quot;QMainWindow&quot; name=&quot;MainWindow&quot;&gt;
+  &lt;property name=&quot;geometry&quot;&gt;
+   &lt;rect&gt;
+    &lt;x&gt;0&lt;/x&gt;
+    &lt;y&gt;0&lt;/y&gt;
+    &lt;width&gt;618&lt;/width&gt;
+    &lt;height&gt;297&lt;/height&gt;
+   &lt;/rect&gt;
+  &lt;/property&gt;
+  &lt;property name=&quot;sizePolicy&quot;&gt;
+   &lt;sizepolicy hsizetype=&quot;Fixed&quot; vsizetype=&quot;Fixed&quot;&gt;
+    &lt;horstretch&gt;0&lt;/horstretch&gt;
+    &lt;verstretch&gt;0&lt;/verstretch&gt;
+   &lt;/sizepolicy&gt;
+  &lt;/property&gt;
+  &lt;property name=&quot;windowTitle&quot;&gt;
+   &lt;string&gt;MainWindow&lt;/string&gt;
+  &lt;/property&gt;
+  &lt;property name=&quot;autoFillBackground&quot;&gt;
+   &lt;bool&gt;true&lt;/bool&gt;
+  &lt;/property&gt;
+  &lt;widget class=&quot;QWidget&quot; name=&quot;centralWidget&quot;&gt;
+   &lt;widget class=&quot;QTextEdit&quot; name=&quot;textEdit&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;10&lt;/x&gt;
+      &lt;y&gt;10&lt;/y&gt;
+      &lt;width&gt;321&lt;/width&gt;
+      &lt;height&gt;191&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;readOnly&quot;&gt;
+     &lt;bool&gt;true&lt;/bool&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButton&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;50&lt;/x&gt;
+      &lt;y&gt;250&lt;/y&gt;
+      &lt;width&gt;51&lt;/width&gt;
+      &lt;height&gt;41&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;text&quot;&gt;
+     &lt;string&gt;South&lt;/string&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButton_2&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;10&lt;/x&gt;
+      &lt;y&gt;210&lt;/y&gt;
+      &lt;width&gt;41&lt;/width&gt;
+      &lt;height&gt;81&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;text&quot;&gt;
+     &lt;string&gt;West&lt;/string&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButton_3&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;50&lt;/x&gt;
+      &lt;y&gt;210&lt;/y&gt;
+      &lt;width&gt;51&lt;/width&gt;
+      &lt;height&gt;41&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;autoFillBackground&quot;&gt;
+     &lt;bool&gt;false&lt;/bool&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;text&quot;&gt;
+     &lt;string&gt;North&lt;/string&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButton_5&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;150&lt;/x&gt;
+      &lt;y&gt;210&lt;/y&gt;
+      &lt;width&gt;51&lt;/width&gt;
+      &lt;height&gt;81&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;text&quot;&gt;
+     &lt;string&gt;Teleport&lt;/string&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButton_4&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;100&lt;/x&gt;
+      &lt;y&gt;210&lt;/y&gt;
+      &lt;width&gt;41&lt;/width&gt;
+      &lt;height&gt;81&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;text&quot;&gt;
+     &lt;string&gt;East&lt;/string&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButton_7&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;270&lt;/x&gt;
+      &lt;y&gt;250&lt;/y&gt;
+      &lt;width&gt;61&lt;/width&gt;
+      &lt;height&gt;41&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;text&quot;&gt;
+     &lt;string&gt;Help&lt;/string&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButton_8&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;210&lt;/x&gt;
+      &lt;y&gt;250&lt;/y&gt;
+      &lt;width&gt;61&lt;/width&gt;
+      &lt;height&gt;41&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;text&quot;&gt;
+     &lt;string&gt;View Map&lt;/string&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButton_6&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;210&lt;/x&gt;
+      &lt;y&gt;210&lt;/y&gt;
+      &lt;width&gt;121&lt;/width&gt;
+      &lt;height&gt;41&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;text&quot;&gt;
+     &lt;string&gt;View Character Info&lt;/string&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButton_9&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;340&lt;/x&gt;
+      &lt;y&gt;210&lt;/y&gt;
+      &lt;width&gt;261&lt;/width&gt;
+      &lt;height&gt;41&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;text&quot;&gt;
+     &lt;string&gt;View Room Items (double click to pick up the Item)&lt;/string&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButton_10&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;340&lt;/x&gt;
+      &lt;y&gt;250&lt;/y&gt;
+      &lt;width&gt;261&lt;/width&gt;
+      &lt;height&gt;41&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;text&quot;&gt;
+     &lt;string&gt;View Character Items (double click to drop the items)&lt;/string&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QListWidget&quot; name=&quot;listWidget&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;340&lt;/x&gt;
+      &lt;y&gt;80&lt;/y&gt;
+      &lt;width&gt;261&lt;/width&gt;
+      &lt;height&gt;121&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QTextEdit&quot; name=&quot;textEdit_2&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;480&lt;/x&gt;
+      &lt;y&gt;10&lt;/y&gt;
+      &lt;width&gt;121&lt;/width&gt;
+      &lt;height&gt;61&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;readOnly&quot;&gt;
+     &lt;bool&gt;true&lt;/bool&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+   &lt;widget class=&quot;QTextEdit&quot; name=&quot;textEdit_3&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;340&lt;/x&gt;
+      &lt;y&gt;10&lt;/y&gt;
+      &lt;width&gt;121&lt;/width&gt;
+      &lt;height&gt;61&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;readOnly&quot;&gt;
+     &lt;bool&gt;true&lt;/bool&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+  &lt;/widget&gt;
+ &lt;/widget&gt;
+ &lt;layoutdefault spacing=&quot;6&quot; margin=&quot;11&quot;/&gt;
+ &lt;resources/&gt;
+ &lt;connections/&gt;
+&lt;/ui&gt;
+</string>
+    </property>
+   </widget>
+   <addaction name="menu_xml_version_1_0_encoding_UTF_8_ui_version_4_0_class_MainWindow_class_widget_class_QMainWindow_name_MainWindow_property_name_geometry_rect_x_0_x_y_0_y_width_618_width_height_297_height_rect_property_property_name_sizePolicy_sizepolicy_hsizetype_Fixed_vsizetype_Fixed_horstretch_0_horstretch_verstretch_0_verstretch_sizepolicy_property_property_name_windowTitle_string_MainWindow_string_property_property_name_autoFillBackground_bool_true_bool_property_widget_class_QWidget_name_centralWidget_widget_class_QTextEdit_name_textEdit_property_name_geometry_rect_x_10_x_y_10_y_width_321_width_height_191_height_rect_property_property_name_readOnly_bool_true_bool_property_widget_widget_class_QPushButton_name_pushButton_property_name_geometry_rect_x_50_x_y_250_y_width_51_width_height_41_height_rect_property_property_name_text_string_South_string_property_widget_widget_class_QPushButton_name_pushButton_2_property_name_geometry_rect_x_10_x_y_210_y_width_41_width_height_81_height_rect_property_property_name_text_string_West_string_property_widget_widget_class_QPushButton_name_pushButton_3_property_name_geometry_rect_x_50_x_y_210_y_width_51_width_height_41_height_rect_property_property_name_autoFillBackground_bool_false_bool_property_property_name_text_string_North_string_property_widget_widget_class_QPushButton_name_pushButton_5_property_name_geometry_rect_x_150_x_y_210_y_width_51_width_height_81_height_rect_property_property_name_text_string_Teleport_string_property_widget_widget_class_QPushButton_name_pushButton_4_property_name_geometry_rect_x_100_x_y_210_y_width_41_width_height_81_height_rect_property_property_name_text_string_East_string_property_widget_widget_class_QPushButton_name_pushButton_7_property_name_geometry_rect_x_270_x_y_250_y_width_61_width_height_41_height_rect_property_property_name_text_string_Help_string_property_widget_widget_class_QPushButton_name_pushButton_8_property_name_geometry_rect_x_210_x_y_250_y_width_61_width_height_41_height_rect_property_property_name_text_string_View_Map_string_property_widget_widget_class_QPushButton_name_pushButton_6_property_name_geometry_rect_x_210_x_y_210_y_width_121_width_height_41_height_rect_property_property_name_text_string_View_Character_Info_string_property_widget_widget_class_QPushButton_name_pushButton_9_property_name_geometry_rect_x_340_x_y_210_y_width_261_width_height_41_height_rect_property_property_name_text_string_View_Room_Items_double_click_to_pick_up_the_Item_string_property_widget_widget_class_QPushButton_name_pushButton_10_property_name_geometry_rect_x_340_x_y_250_y_width_261_width_height_41_height_rect_property_property_name_text_string_View_Character_Items_double_click_to_drop_the_items_string_property_widget_widget_class_QListWidget_name_listWidget_property_name_geometry_rect_x_340_x_y_80_y_width_261_width_height_121_height_rect_property_widget_widget_class_QTextEdit_name_textEdit_2_property_name_geometry_rect_x_480_x_y_10_y_width_121_width_height_61_height_rect_property_property_name_readOnly_bool_true_bool_property_widget_widget_class_QTextEdit_name_textEdit_3_property_name_geometry_rect_x_340_x_y_10_y_width_121_width_height_61_height_rect_property_property_name_readOnly_bool_true_bool_property_widget_widget_widget_layoutdefault_spacing_6_margin_11_resources_connections_ui"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
