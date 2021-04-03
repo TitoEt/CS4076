@@ -24,7 +24,7 @@ public:
 	string shortDescription();
 	string longDescription();
 	Room* nextRoom(string direction);
-    void addClue(Clue *inClue);
+    void addClues(Clue *inClue);
     string displayClue();
     int isClueInRoom(string inString);
     void removeClueFromRoom(int location);
