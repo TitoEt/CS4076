@@ -11,23 +11,25 @@ using std::vector;//sequence container -- think pass the parcel but with pointer
 class Room {
 
 private:
-	string description;
+    string shoDescription;
+    string loDescription;
 	map<string, Room*> exits;
 	string exitString();
-    vector <Clue> cluesInRoom;
+    vector <clues> cluesInRoom;
 
 
 public:
     int numberOfItems();
-	Room(string description);
+    Room(string shortDescription, string longDescription);
 	void setExits(Room *north, Room *east, Room *south, Room *west);
 	string shortDescription();
 	string longDescription();
 	Room* nextRoom(string direction);
-    void addClues(Clue *inClue);
+    void addClues(clues *inClue);
     string displayClue();
     int isClueInRoom(string inString);
     void removeClueFromRoom(int location);
+    int numberOfClues();
 };
 
 #endif
