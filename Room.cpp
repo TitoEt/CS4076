@@ -1,9 +1,10 @@
 #include "Room.h"
-#include "Command.h"
+#include "command.h"
 
 
-Room::Room(string description) {
-	this->description = description;
+Room::Room(string shortDescription, string longDescription) {
+    this->shoDescription = shortDescription;
+    this->loDescription = longDescription;
 }
 
 void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
@@ -18,11 +19,11 @@ void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
 }
 
 string Room::shortDescription() {
-	return description;
+    return shoDescription;
 }
 
 string Room::longDescription() {
-    return "room = " + description + ".\n" + displayClue() + exitString();
+    return "room = " + shoDescription + ".\n" + loDescription + ".\n" + displayClue() + exitString();
 }
 
 string Room::exitString() {
@@ -41,7 +42,7 @@ Room* Room::nextRoom(string direction) {
 				// part of the "pair" (<string, Room*>) and return it.
 }
 
-void Room::addCLue(Clue *inClue) {
+void Room::addClues(clues *inClue) {
     //cout <<endl;
     //cout << "Just added" + inClue->getLongDescription();
     cluesInRoom.push_back(*inClue);
