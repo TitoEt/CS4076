@@ -11,9 +11,10 @@ using std::vector;//sequence containers that store elements for dynamic data - l
 class Character {
 private:
     string description;
-     vector < string > cluesInCharacter;
+     vector < clues > cluesInCharacter;
 public:
-    void addClues(string Clue);
+    void addClues(clues &clue);
+    void addClues(clues *clue);
 public:
     Character(string description);
     string shortDescription();
