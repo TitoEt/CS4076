@@ -12,10 +12,10 @@ ZorkUL::ZorkUL() {
 void ZorkUL::createRooms()  {
 
     Room *one, *two, *three,*four,*five,*six;
-        one = new Room("Outside","You stand outside the crimescene. Go west to enter the house.");
-        two = new Room("Living Room","Inside the living room, there are two bodies. Start investigating.");
-        three = new Room("Bathroom","Another chamber quite similar to the previous. There seems to only be exits to the east and the west. \nYou feel a chill and the sudden urge to leave.");
-        four = new Room("Kitchen","A very cold chamber. You see water trickling down one of the walls. You're certain that this place is underground. \nThere are exits to the north and the east.");
+        one = new Room("Outside","You stand outside the crimescene. Go east to enter the house.");
+        two = new Room("Living Room","Inside the living room, there are two bodies. I should look for clues.");
+        three = new Room("Bathroom","There's someone in here. What are they doing?");
+        four = new Room("Kitchen","There's blood on the floor.");
         five = new Room("Garden","flowers again");
         six = new Room("Flower Shop", "Flowers");
         roomList.push_back(one);
@@ -27,11 +27,12 @@ void ZorkUL::createRooms()  {
 
 
 //             (N, E, S, W)
-    one->setExits(NULL, two, NULL, NULL);
-    two->setExits(three, one, NULL, NULL);
-    three->setExits(four, NULL, two, NULL);
-    four->setExits(five, NULL, three, NULL);
-    five->setExits(NULL, NULL, four, NULL);
+    one->setExits(six, two, NULL, NULL);
+    two->setExits(three, NULL, NULL, one);
+    three->setExits(five, four, two, NULL);
+    four->setExits(NULL, NULL, NULL, three);
+    five->setExits(NULL, NULL, three, NULL);
+    six->setExits(NULL, NULL, one, NULL);
     currentRoom = one;
 }
 
