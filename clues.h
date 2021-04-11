@@ -18,6 +18,7 @@ public:
     string getShortDescription();
     bool operator==(clues &i);
     string getLongDescription();
+    string addClue();
 };
 
 #endif // CLUES_H
