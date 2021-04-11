@@ -1,8 +1,7 @@
 #ifndef ZORKUL_H_
 #define ZORKUL_H_
 
-#include "command.h"
-#include "Parser.h"
+#include "character.h"
 #include "Room.h"
 #include "clues.h"
 #include <iostream>
@@ -11,20 +10,18 @@ using namespace std;
 
 class ZorkUL {
 private:
-    Parser parser;
-    Room *currentRoom;
+    Room* currentRoom;
     void createRooms();
     void createClues();
-    void printWelcome();
-    bool processCommand(Command command);
-    void printHelp();
-    void goRoom(Command command);
     void displayClues();
+    vector <Room*> roomList;
+    Character Teran;
 
 public:
     ZorkUL();
-    void play();
+    string play();
     string go(string direction);
+    Room* getRoom();
 };
 
 #endif /*ZORKUL_H_*/
