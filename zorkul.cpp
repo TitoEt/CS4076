@@ -2,6 +2,7 @@
 
 using namespace std;
 #include "ZorkUL.h";
+#include "Room.h";
 
 ZorkUL::ZorkUL() {
     createRooms();
@@ -12,14 +13,17 @@ void ZorkUL::createRooms()  {
     Room *a, *b, *c, *d, *e;
 
     a = new Room("Living room", ":/maps/livingroom.png",true, false);
-        a->addClue(new Clue("x", 1, 11));
-        a->addClue(new Clue("y", 2, 22));
-    b = new Room("b");
-        b->addClue(new Clue("xx", 3, 33));
-        b->addClue(new Clue("yy", 4, 44));
-    c = new Room("c");
-    d = new Room("d");
-    e = new Room("e");
+        a->addClue(new Clue("Baseball bat", 1, 11));
+        a->addClue(new Clue("Blood Stains", 2, 22));
+    b = new Room("Kitchen", ":/maps/kitchen.png", true, false);
+        b->addClue(new Clue("Culprit finger print", 3, 33));
+
+    c = new Room("Flowershop", ":/maps/flowershop.png", true, false);
+        c->addClue(new Clue("Gelsium", 4, 44));
+    d = new Room("Bathroom", ":/maps/bathroom.png", true, false);
+        d->addClue(new Clue("Pill bottle", 5, 55));
+    e = new Room("Garden", ":/maps/garden.png", true, false);
+        e->addClue(new Clue(""))
 
 //             (N, E, S, W)
     a->setExits(e, b, d, c);
@@ -31,7 +35,12 @@ void ZorkUL::createRooms()  {
 }
 
 void ZorkUL::createClues(){
-    Clues *v, *w, *x, *y, *z;
+    Clue *pillbottle = new Clue("Pill Bottle", true);
+    Clue *bloodstain = new Clue("Blood Stains", true);
+    Clue *gelsiumflower = new Clue("Gelsium", true);
+    Clue *fingerprint = new Clue("Culprit finger print", true);
+    Clue *bat = new Clue("Baseball bat", true);
+    Clue *autopsy = new Clue("Autopsy Results", true);
 }
 
 /**
@@ -81,13 +90,10 @@ bool ZorkUL::processCommand(Command command) {
 
     else if (commandWord.compare("map") == 0)
         {
-        cout << "[h] --- [f] --- [g]" << endl;
-        cout << "         |         " << endl;
-        cout << "         |         " << endl;
         cout << "[c] --- [a] --- [b]" << endl;
         cout << "         |         " << endl;
         cout << "         |         " << endl;
-        cout << "[i] --- [d] --- [e]" << endl;
+        cout << " [d] --- [e]" << endl;
         }
 
     else if (commandWord.compare("go") == 0)
