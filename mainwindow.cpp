@@ -9,48 +9,14 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
     ui->textEdit_2->setTextColor(QColor("blue"));
     ui->textEdit_3->setTextColor(QColor("purple"));
     ui->textEdit->append(QString::fromStdString(zork->printWelcome() + "\n"));
+    zork = new ZorkUL();
+    character = new Character("Teran");
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-void MainWindow::on_pushButton_clicked()
-{
-    goRoom("south");
-}
-
-void MainWindow::on_pushButton_2_clicked()
-{
-    goRoom("west");
-}
-
-void MainWindow::on_pushButton_3_clicked()
-{
-    goRoom("north");
-}
-
-void MainWindow::on_pushButton_4_clicked()
-{
-    goRoom("east");
-}
-
-void MainWindow::on_pushButton_7_clicked()
-{
-    ui->textEdit->append(QString::fromStdString(zork->printHelp()));
-}
-
-void MainWindow::on_pushButton_8_clicked()
-{
-    ui->textEdit->append(QString::fromStdString(zork->teleport() + "\n"));
-}
-
-void MainWindow::on_pushButton_9_clicked()
-{
-    putInInventory = true;
-    vector<clue> items = zork->getCurrentRoom().viewClues();
-    listClues(clues, "room");
 }
 
 void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem*item)
@@ -63,22 +29,17 @@ void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem*item)
     if (putInInventory)
     {
         Room r = zork->getCurrentRoom();
-        Item m = r.findItem(i);
+        Item m = r.findClues(i);
         //character.itemsInCharacter.push_back(m);
         addItem(character.itemsInCharacter, m);
-        character.addItem(&m);
-        r.removeItem(m);
+        character->addClues(&m);
         ui->textEdit->append(QString::fromStdString(description + " has been added to your inventory.\n"));
-        overencumberedTest();
     }
-    else
-    {
-        Item m = character.findItem(i);
-        Room r = zork->getCurrentRoom();
-        addItem(r.itemsInRoom, m);
-        character.removeItem(m);
-        ui->textEdit->append(QString::fromStdString(description + " has been removed from yuor inventory.\n"));
-    }
+}
+
+void MainWindow::showRooms(){
+    Room* currentRoom = zork->getRoom();
+    string description = currentRoom->shortDescription();
 }
 
 void MainWindow::addItemsToListWidget(vector<Item> items)
@@ -114,24 +75,7 @@ void MainWindow::addItemsToListWidget(vector<Item> items)
     }
 }
 
-void MainWindow::endGameState(string message1, string message2)
-{
-    ui->pushButton->setEnabled(false);
-    ui->pushButton_2->setEnabled(false);
-    ui->pushButton_3->setEnabled(false);
-    ui->pushButton_4-->setEnabled(false);
-    ui->pushButton_5->setEnabled(false);
-    ui->pushButton_6->setEnabled(false);
-    ui->pushButton_7->setEnabled(false);
-    ui->pushButton_8->setEnabled(false);
-    ui->pushButton_9->setEnabled(false);
-    ui->pushButton_10->setEnabled(false);
-    ui->listWidget->setEnabled(false);
-
-    ui->textEdit->setText(QString::fromStdString(character.description + " has " + message1 + ". You have " + message2 + " the game.\n"));
-}
-
-void MainWindow::listClues(vector<Clue> clues, QString description)
+void MainWindow::listClues(vector<clues> clues, QString description)
 {
     if (!clues.empty())
     {
@@ -143,3 +87,22 @@ void MainWindow::listClues(vector<Clue> clues, QString description)
     }
 }
 
+void MainWindow::on_South_clicked()
+{
+    zork->go("South");
+}
+
+void MainWindow::on_West_clicked()
+{
+    zork->go("West");
+}
+
+void MainWindow::on_East_clicked()
+{
+    zork->go("East");
+}
+
+void MainWindow::on_North_clicked()
+{
+    zork->go("North");
+}
