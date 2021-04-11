@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "zorkul.h"
+#include "character.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -18,7 +20,19 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_South_clicked();
+
+    void on_West_clicked();
+
+    void on_East_clicked();
+
+    void on_North_clicked();
+
 private:
     Ui::MainWindow *ui;
+    void showRooms();
+    ZorkUL *zork;
+    Character* character;
 };
 #endif // MAINWINDOW_H
