@@ -1,55 +1,55 @@
 #include "Room.h"
-#include "command.h"
 
+Room::Room(string description) {
 
-Room::Room(string shortDescription, string longDescription) {
-    this->shoDescription = shortDescription;
-    this->loDescription = longDescription;
+    this->shortDescription() = shortDescription();
+    this->longDescription() = longDescription();
+
+    description = shortDescription() + longDescription();
 }
 
 void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
-	if (north != NULL)
-		exits["north"] = north;
-	if (east != NULL)
-		exits["east"] = east;
-	if (south != NULL)
-		exits["south"] = south;
-	if (west != NULL)
-		exits["west"] = west;
+    if (north != NULL)
+        exits["north"] = north;
+    if (east != NULL)
+        exits["east"] = east;
+    if (south != NULL)
+        exits["south"] = south;
+    if (west != NULL)
+        exits["west"] = west;
 }
 
 string Room::shortDescription() {
-    return shoDescription;
+    return shortDescription();
 }
 
 string Room::longDescription() {
-    return "room = " + shoDescription + ".\n" + loDescription + ".\n" + displayClue() + exitString();
+    return "room = " + shortDescription() + ".\n" + longDescription() + ".\n" + displayClue() + exitString();
 }
 
 string Room::exitString() {
-	string returnString = "\nexits =";
-	for (map<string, Room*>::iterator i = exits.begin(); i != exits.end(); i++)
-		// Loop through map
-		returnString += "  " + i->first;	// access the "first" element of the pair (direction as a string)
-	return returnString;
+    string returnString = "\nexits =";
+    for (map<string, Room*>::iterator i = exits.begin(); i != exits.end(); i++)
+        // Loop through map
+        returnString += "  " + i->first;	// access the "first" element of the pair (direction as a string)
+    return returnString;
 }
 
 Room* Room::nextRoom(string direction) {
-	map<string, Room*>::iterator next = exits.find(direction); //returns an iterator for the "pair"
-	if (next == exits.end())
-		return NULL; // if exits.end() was returned, there's no room in that direction.
-	return next->second; // If there is a room, remove the "second" (Room*)
-				// part of the "pair" (<string, Room*>) and return it.
+    map<string, Room*>::iterator next = exits.find(direction); //returns an iterator for the "pair"
+    if (next == exits.end())
+        return NULL; // if exits.end() was returned, there's no room in that direction.
+    return next->second; // If there is a room, remove the "second" (Room*)
+                // part of the "pair" (<string, Room*>) and return it.
 }
 
 void Room::addClues(clues *inClue) {
-    //cout <<endl;
-    //cout << "Just added" + inClue->getLongDescription();
+    cout << "Just added" + inClue->getLongDescription() <<endl;
     cluesInRoom.push_back(*inClue);
 }
 
 string Room::displayClue() {
-    string tempString = "clues in room = ";
+    string tempString = "Clues in room = ";
     int sizeClues = (cluesInRoom.size());
     if (cluesInRoom.size() < 1) {
         tempString = "no clues in room";
@@ -88,3 +88,14 @@ int Room::isClueInRoom(string inString)
         }
     return -1;
 }
+
+bool Room::allCluesCollected(){
+    if(cluesInRoom.empty()){
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
