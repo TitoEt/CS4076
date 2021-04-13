@@ -6,30 +6,29 @@
 #include <vector>
 #include "clues.h"
 using namespace std;
-using std::vector;//sequence container -- think pass the parcel but with pointers to an array element
 
-class Room {
+class Room{
 
 private:
-    string shoDescription;
-    string loDescription;
-	map<string, Room*> exits;
-	string exitString();
+    string description;
+    map<string, Room*> exits;
+    string exitString();
     vector <clues> cluesInRoom;
 
 
 public:
-    int numberOfItems();
-    Room(string shortDescription, string longDescription);
-	void setExits(Room *north, Room *east, Room *south, Room *west);
-	string shortDescription();
-	string longDescription();
-	Room* nextRoom(string direction);
-    void addClues(clues *inClue);
+    int numberOfClues();
+    Room(string description);
+    void setExits(Room *north, Room *east, Room *south, Room *west);
+    string shortDescription();
+    string longDescription();
+    Room* nextRoom(string direction);
+    void addClues(clues *inclues);
     string displayClue();
     int isClueInRoom(string inString);
+    bool allCluesCollected();
     void removeClueFromRoom(int location);
-    int numberOfClues();
 };
 
 #endif
+
