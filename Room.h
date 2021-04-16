@@ -20,8 +20,7 @@ public:
     int numberOfClues();
     Room(string description);
     void setExits(Room *north, Room *east, Room *south, Room *west);
-    string shortDescription();
-    string longDescription();
+    string getDescription();
     Room* nextRoom(string direction);
     void addClues(clues *inclues);
     string displayClue();
@@ -31,4 +30,3 @@ public:
 };
 
 #endif
-

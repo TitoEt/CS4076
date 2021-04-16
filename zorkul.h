@@ -15,7 +15,6 @@ private:
     void createClues();
     void displayClues();
     vector <Room*> roomList;
-    Character Teran;
 
 public:
     ZorkUL();

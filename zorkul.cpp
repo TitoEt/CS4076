@@ -1,20 +1,14 @@
-#include <iostream>
-
-using namespace std;
 #include "zorkul.h"
-#include "clues.h"
-#include "room.h"
 
 ZorkUL::ZorkUL() {
     createRooms();
-    createClues();
 }
 
 void ZorkUL::createRooms()  {
 
     Room *one, *two, *three, *four, *five, *six;
 
-        one = new Room("Outside; You stand outside the crimescene. Go east to enter the house.");
+        one = new Room("Outside; \nYou stand outside the crimescene. Go east to enter the house.");
         two = new Room("Living Room; Inside the living room, there are two bodies. I should look for clues.");
         three = new Room("Bathroom; There's someone in here. What are they doing?");
         four = new Room("Kitchen; There's blood on the floor.");
@@ -29,6 +23,12 @@ void ZorkUL::createRooms()  {
         roomList.push_back(six);
 
     clues *bloodstains, *pillbottle, *baseballbat, *fingerprint, *gelsium;
+
+        bloodstains = new clues("Its a bloodstain pog");
+        pillbottle = new clues("A bottle of pills");
+        baseballbat = new clues("It has spme blood on it");
+        fingerprint = new clues("!!!who could it be");
+        gelsium = new clues("flower");
 
         two->addClues(bloodstains);
         three->addClues(pillbottle);
@@ -53,16 +53,6 @@ Room* ZorkUL::getRoom() {
     return currentRoom;
 }
 
-string ZorkUL::play() {
-    return currentRoom->longDescription();
-}
-
-/**
- * Given a command, process (that is: execute) the command.
- * If this command ends the ZorkUL game, true is returned, otherwise false is
- * returned.
- */
-
 string ZorkUL::go(string direction) {
     //Make the direction lowercase
     //transform(direction.begin(), direction.end(), direction.begin(),:: tolower);
@@ -73,6 +63,6 @@ string ZorkUL::go(string direction) {
     else
     {
         currentRoom = nextRoom;
-        return currentRoom->longDescription();
+        return currentRoom->getDescription();
     }
 }

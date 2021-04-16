@@ -1,6 +1,7 @@
 #ifndef CHARACTER_H_
 #define CHARACTER_H_
-#include "ZorkUL.h"
+#include "zorkul.h"
+#include "clues.h"
 
 #include <string>
 using namespace std;
@@ -11,7 +12,7 @@ using std::vector;//sequence containers that store elements for dynamic data - l
 class Character {
 private:
     string description;
-     vector < clues > cluesInCharacter;
+    vector < clues > cluesInCharacter;
 public:
     void addClues(clues &clue);
     void addClues(clues *clue);
@@ -22,4 +23,4 @@ public:
 
 };
 
-#endif CHARACTER_H_
+#endif// CHARACTER_H_

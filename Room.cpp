@@ -1,11 +1,7 @@
 #include "Room.h"
 
 Room::Room(string description) {
-
-    this->shortDescription() = shortDescription();
-    this->longDescription() = longDescription();
-
-    description = shortDescription() + longDescription();
+    this->description = description;
 }
 
 void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
@@ -19,12 +15,8 @@ void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
         exits["west"] = west;
 }
 
-string Room::shortDescription() {
-    return shortDescription();
-}
-
-string Room::longDescription() {
-    return "room = " + shortDescription() + ".\n" + longDescription() + ".\n" + displayClue() + exitString();
+string Room::getDescription() {
+    return description;
 }
 
 string Room::exitString() {
@@ -98,4 +90,3 @@ bool Room::allCluesCollected(){
         return false;
     }
 }
-
