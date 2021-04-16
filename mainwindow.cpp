@@ -5,8 +5,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
 {
     ui->setupUi(this);
     zork = new ZorkUL();
-//  ui->textBox->append(QString::fromStdString(zork->printWelcome() + "\n"));
     character = new Character("Teran");
+
+    ui->textBox->append(QString::fromStdString(zork->printWelcome()));
 }
 
 MainWindow::~MainWindow()
@@ -29,21 +30,28 @@ void MainWindow::listClues(vector<clues> clues, QString description)
 */
 void MainWindow::on_South_clicked()
 {
-    zork->go("South");
-    ui->textBox->append(QString::fromStdString(zork->getRoom()->getDescription()));
+    if(zork->go("South")) {
+        ui->textBox->append(QString::fromStdString(zork->getRoom()->getDescription()));
+    }
 }
 
 void MainWindow::on_West_clicked()
 {
-    zork->go("West");
+    if(zork->go("West")) {
+        ui->textBox->append(QString::fromStdString(zork->getRoom()->getDescription()));
+    }
 }
 
 void MainWindow::on_East_clicked()
 {
-    zork->go("East");
+    if(zork->go("East")) {
+        ui->textBox->append(QString::fromStdString(zork->getRoom()->getDescription()));
+    }
 }
 
 void MainWindow::on_North_clicked()
 {
-    zork->go("North");
+    if(zork->go("North")) {
+        ui->textBox->append(QString::fromStdString(zork->getRoom()->getDescription()));
+    }
 }

@@ -19,8 +19,9 @@ private:
 public:
     ZorkUL();
     string play();
-    string go(string direction);
+    bool go(string direction);
     Room* getRoom();
+    string printWelcome();
 };
 
 #endif /*ZORKUL_H_*/

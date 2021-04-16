@@ -4,23 +4,27 @@ ZorkUL::ZorkUL() {
     createRooms();
 }
 
+string ZorkUL::printWelcome() {
+    return "Something something you're a detective, crime scene jazz.\n" + getRoom()->getDescription();
+}
+
 void ZorkUL::createRooms()  {
 
-    Room *one, *two, *three, *four, *five, *six;
+    Room *outside, *livingRoom, *kitchen, *bathroom, *garden, *flowerShop;
 
-        one = new Room("Outside; \nYou stand outside the crimescene. Go east to enter the house.");
-        two = new Room("Living Room; Inside the living room, there are two bodies. I should look for clues.");
-        three = new Room("Bathroom; There's someone in here. What are they doing?");
-        four = new Room("Kitchen; There's blood on the floor.");
-        five = new Room("Garden; flowers again");
-        six = new Room("Flower Shop; Flowers");
+        outside = new Room("Outside; \nYou stand outside the crimescene. Go east to enter the house.");
+        livingRoom = new Room("Living Room; \nInside the living room, there are two bodies. I should look for clues.");
+        kitchen = new Room("Kitchen; \nThere's blood on the floor.");
+        bathroom = new Room("Bathroom; \nThere's someone in here. What are they doing?");
+        garden = new Room("Garden; \nflowers again");
+        flowerShop = new Room("Flower Shop; \nFlowers");
 
-        roomList.push_back(one);
-        roomList.push_back(two);
-        roomList.push_back(three);
-        roomList.push_back(four);
-        roomList.push_back(five);
-        roomList.push_back(six);
+        roomList.push_back(outside);
+        roomList.push_back(livingRoom);
+        roomList.push_back(kitchen);
+        roomList.push_back(bathroom);
+        roomList.push_back(garden);
+        roomList.push_back(flowerShop);
 
     clues *bloodstains, *pillbottle, *baseballbat, *fingerprint, *gelsium;
 
@@ -30,39 +34,36 @@ void ZorkUL::createRooms()  {
         fingerprint = new clues("!!!who could it be");
         gelsium = new clues("flower");
 
-        two->addClues(bloodstains);
-        three->addClues(pillbottle);
-        four->addClues(baseballbat);
-        four->addClues(fingerprint);
-        five->addClues(gelsium);
-        six->addClues(gelsium);
-        six->addClues(fingerprint);
+        livingRoom->addClues(bloodstains);
+        kitchen->addClues(pillbottle);
+        bathroom->addClues(baseballbat);
+        bathroom->addClues(fingerprint);
+        garden->addClues(gelsium);
+        flowerShop->addClues(gelsium);
+        flowerShop->addClues(fingerprint);
 
 
 //             (N, E, S, W)
-    one->setExits(six, two, NULL, NULL);
-    two->setExits(three, NULL, NULL, one);
-    three->setExits(five, four, two, NULL);
-    four->setExits(NULL, NULL, NULL, three);
-    five->setExits(NULL, NULL, three, NULL);
-    six->setExits(NULL, NULL, one, NULL);
-    currentRoom = one;
+    outside->setExits(flowerShop, livingRoom, NULL, NULL);
+    livingRoom->setExits(kitchen, NULL, NULL, outside);
+    kitchen->setExits(garden, bathroom, livingRoom, NULL);
+    bathroom->setExits(NULL, NULL, NULL, kitchen);
+    garden->setExits(NULL, NULL, kitchen, NULL);
+    flowerShop->setExits(NULL, NULL, outside, NULL);
+    currentRoom = outside;
 }
 
 Room* ZorkUL::getRoom() {
     return currentRoom;
 }
 
-string ZorkUL::go(string direction) {
-    //Make the direction lowercase
-    //transform(direction.begin(), direction.end(), direction.begin(),:: tolower);
-    //Move to the next room
+bool ZorkUL::go(string direction) {
     Room* nextRoom = currentRoom->nextRoom(direction);
     if (nextRoom == NULL)
-        return("direction null");
+        return false;
     else
     {
         currentRoom = nextRoom;
-        return currentRoom->getDescription();
+        return true;
     }
 }
