@@ -27,7 +27,7 @@ public:
     void addClues(clues *inclues);
     string displayClue();
     int isClueInRoom(string inString);
-    bool allCluesCollected();
+    string allCluesCollected();
     void removeClueFromRoom(int location);
 };
 
