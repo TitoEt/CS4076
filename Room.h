@@ -11,6 +11,7 @@ class Room{
 
 private:
     string description;
+    string name;
     map<string, Room*> exits;
     string exitString();
     vector <clues> cluesInRoom;
@@ -18,9 +19,10 @@ private:
 
 public:
     int numberOfClues();
-    Room(string description);
+    Room(string name, string description);
     void setExits(Room *north, Room *east, Room *south, Room *west);
     string getDescription();
+    string getName();
     Room* nextRoom(string direction);
     void addClues(clues *inclues);
     string displayClue();

@@ -1,6 +1,7 @@
 #include "Room.h"
 
-Room::Room(string description) {
+Room::Room(string name, string description) {
+    this->name = name;
     this->description = description;
 }
 
@@ -13,6 +14,10 @@ void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
         exits["South"] = south;
     if (west != NULL)
         exits["West"] = west;
+}
+
+string Room::getName() {
+    return name;
 }
 
 string Room::getDescription() {

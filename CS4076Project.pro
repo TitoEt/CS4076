@@ -9,22 +9,20 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Room.cpp \
+    character.cpp \
     clues.cpp \
-    command.cpp \
-    crimescene.cpp \
-    instructions.cpp \
     main.cpp \
     mainwindow.cpp \
-    rooms.cpp
+    zorkul.cpp
 
 HEADERS += \
+    Room.h \
+    character.h \
     clues.h \
-    command.h \
-    crimescene.h \
-    instructions.h \
     main.h \
     mainwindow.h \
-    rooms.h
+    zorkul.h
 
 FORMS += \
     mainwindow.ui
@@ -33,3 +31,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc

@@ -14,7 +14,7 @@ private:
     void createRooms();
     void createClues();
     void displayClues();
-    vector <Room*> roomList;
+    Room* roomList[6];
 
 public:
     ZorkUL();

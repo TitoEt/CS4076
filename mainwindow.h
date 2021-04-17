@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "zorkul.h"
 #include "character.h"
+#include <QPixmap>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui

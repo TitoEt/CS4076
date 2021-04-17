@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/Alex Murphy.png</file>
+        <file>images/Bathroom.png</file>
+        <file>images/bloodstain.png</file>
+        <file>images/Charlotte Davis.png</file>
+        <file>images/Chloe Jones.png</file>
+        <file>images/fingerprint_PNG56.png</file>
+        <file>images/Garden.png</file>
+        <file>images/Jessica WIlliams.png</file>
+        <file>images/Kitchen.png</file>
+        <file>images/Kyle Davis.png</file>
+        <file>images/Living Room.png</file>
+        <file>images/map.png</file>
+        <file>images/Pill-Bottle-2.png</file>
+        <file>images/Rick Lawlor.png</file>
+        <file>images/Teran Greyhelm.png</file>
+        <file>images/Outside.png</file>
+        <file>images/Flower Shop.png</file>
+        <file>images/notepad.png</file>
+    </qresource>
+</RCC>

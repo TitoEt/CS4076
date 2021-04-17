@@ -8,7 +8,7 @@ using namespace std;
 
 class clues
 {
-private:
+protected:
     string description;
     string longDescription;
 
@@ -19,6 +19,7 @@ public:
     bool operator==(clues &i);
     string getLongDescription();
     string addClue();
+    int thisIsAGlobalVariable = 4;
 };
 
 #endif // CLUES_H
