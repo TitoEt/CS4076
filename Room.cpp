@@ -86,12 +86,21 @@ int Room::isClueInRoom(string inString)
     return -1;
 }
 
-bool Room::allCluesCollected(){
+string Room::allCluesCollected(){
     if(cluesInRoom.empty()){
-        return true;
+        return "There are no clues left in this room";
     }
     else
     {
-        return false;
+        return "Keep searching!";
     }
+}
+
+//mayhaps? this is horrific syntax and just terrible coding in general, but again; just so you can have a look
+void Room::removeClueFromRoom(int location){
+    for(int i = numberOfClues(); i <= 0; i++){
+        cout << &"All clues have been collected from:" [ location]  <<endl;
+        cluesInRoom.erase(cluesInRoom.begin()+i);
+    }
+}
 }
