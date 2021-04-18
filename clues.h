@@ -10,14 +10,14 @@ class clues
 {
 protected:
     string description;
-    string longDescription;
+    string name;
 
 public:
     clues();
-    clues(string description);
-    string getShortDescription();
+    clues(string name, string description);
+    string getDescription();
+    string getName();
     bool operator==(clues &i);
-    string getLongDescription();
     string addClue();
     int thisIsAGlobalVariable = 4;
 };

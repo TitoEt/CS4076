@@ -14,15 +14,12 @@ class Character {
     friend class ZorkUL;
 private:
     string description;
-    vector < clues > cluesInCharacter;
+    vector < clues > inventory;
 
 public:
     void addClues(clues &clue);
     void addClues(clues *clue);
     Character(string description);
-    string shortDescription();
-    string longDescription();
-
 };
 
 #endif// CHARACTER_H_

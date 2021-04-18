@@ -31,6 +31,8 @@ private slots:
 
     void on_North_clicked();
 
+    void on_Search_clicked();
+
 private:
     Ui::MainWindow *ui;
     void showRooms();

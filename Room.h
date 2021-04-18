@@ -14,7 +14,7 @@ private:
     string name;
     map<string, Room*> exits;
     string exitString();
-    vector <clues> cluesInRoom;
+    vector <clues*> cluesInRoom;
 
 
 public:
@@ -26,9 +26,11 @@ public:
     Room* nextRoom(string direction);
     void addClues(clues *inclues);
     string displayClue();
-    int isClueInRoom(string inString);
     string allCluesCollected();
-    void removeClueFromRoom(int location);
+    void removeClues();
+    vector<clues*> getClues();
+    bool isClueInRoom();
+
 };
 
 #endif

@@ -41,49 +41,24 @@ Room* Room::nextRoom(string direction) {
 }
 
 void Room::addClues(clues *inClue) {
-    cout << "Just added" + inClue->getLongDescription() <<endl;
-    cluesInRoom.push_back(*inClue);
+    cluesInRoom.push_back(inClue);
 }
 
-string Room::displayClue() {
-    string tempString = "Clues in room = ";
-    int sizeClues = (cluesInRoom.size());
-    if (cluesInRoom.size() < 1) {
-        tempString = "no clues in room";
-        }
-    else if (cluesInRoom.size() > 0) {
-       int x = (0);
-        for (int n = sizeClues; n > 0; n--) {
-            tempString = tempString + cluesInRoom[x].getShortDescription() + "  " ;
-            x++;
-            }
-        }
-    return tempString;
-    }
+void Room::removeClues() {
+    cluesInRoom.clear();
+}
 
 int Room::numberOfClues() {
     return cluesInRoom.size();
 }
 
-int Room::isClueInRoom(string inString)
+bool Room::isClueInRoom() {
+    return numberOfClues() > 0;
+}
+
+vector<clues*> Room::getClues()
 {
-    int sizeClues = (cluesInRoom.size());
-    if (cluesInRoom.size() < 1) {
-        return false;
-        }
-    else if (cluesInRoom.size() > 0) {
-       int x = (0);
-        for (int n = sizeClues; n > 0; n--) {
-            // compare inString with short description
-            int tempFlag = inString.compare( cluesInRoom[x].getShortDescription());
-            if (tempFlag == 0) {
-                cluesInRoom.erase(cluesInRoom.begin()+x);
-                return x;
-            }
-            x++;
-            }
-        }
-    return -1;
+    return cluesInRoom;
 }
 
 string Room::allCluesCollected(){
@@ -94,13 +69,4 @@ string Room::allCluesCollected(){
     {
         return "Keep searching!";
     }
-}
-
-//mayhaps? this is horrific syntax and just terrible coding in general, but again; just so you can have a look
-void Room::removeClueFromRoom(int location){
-    for(int i = numberOfClues(); i <= 0; i++){
-        cout << &"All clues have been collected from:" [ location]  <<endl;
-        cluesInRoom.erase(cluesInRoom.begin()+i);
-    }
-}
 }

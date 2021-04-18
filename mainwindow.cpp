@@ -1,11 +1,14 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainWindow) , zork(new ZorkUL()) , character(new Character("Teran"))
 {
     ui->setupUi(this);
-    zork = new ZorkUL();
     character = new Character("Teran");
+
+/*    QPixmap p = QPixmap(":/images/images/my_cursor.png");
+    QCursor c = QCursor(p, 0, 0);
+    setCursor(c); */
 
     ui->textBox->append(QString::fromStdString(zork->printWelcome()));
     QPixmap pix(QString::fromStdString(":/images/images/Outside.png"));
@@ -16,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete zork;
+    delete character;
 }
 
 /*
@@ -66,30 +71,14 @@ void MainWindow::on_North_clicked()
         ui->displayWin->setPixmap(pix);
     }
 }
-//this is absolutely not working. but its the closest i got to implementing the inventory
-//I absolutelely cried doing this. whelp
-void MainWindow::on_Search_clicked(){
-    
-    if(zork->go("Search")) {
-        ui->inventory->append(QString::fromStdString(zork->getRoom()->getName() + zork->getRoom()->getDescription()));
-        QPixmap pix(QString::fromStdString(":/images/images/"+zork->getClues()->getShortDescription()+ ".png"));
-        ui->displayWin->setPixmap(pix);
-    }
-    string clue;
-    string description = clue->getShortDescription().toStdString();
-        string m  = new clues(description);
-        ui->inventory->(ui->inventory->row(clues));
-        //delete clues;
 
-        if (cluesInRoom <= 0)
-        {
-            Room* r = zork->getRoom();
-            clues* m = r->displayClue();
-
-            addClues(character->cluesInCharacter, m);
-            character->addClues(&m);
-            r->removeClueFromRoom(m);
-            ui->textBox->append(QString::fromStdString(description + " has been added to your inventory.\n"));
-
+void MainWindow::on_Search_clicked()
+{
+    if(zork->getRoom()->isClueInRoom()) {
+        int max = zork->getRoom()->numberOfClues();
+        for(int i=0; i < max; i++ ) {
+            character->addClues(zork->getRoom()->getClues()[i]);
+            ui->textBox->append(QString::fromStdString(zork->getRoom()->getClues()[i]->getName()));
         }
+    }
 }

@@ -1,7 +1,8 @@
 #include "clues.h"
 
-clues::clues(string description)
+clues::clues(string name, string description)
 {
+    this->name = name;
     this->description = description;
 }
 
@@ -9,7 +10,7 @@ bool clues::operator==(clues &i)
 {
     int test = 0;
 
-    if (this->getShortDescription() == i.getShortDescription())
+    if (this->getDescription() == i.getDescription())
     {
         test = 1;
     }
@@ -17,12 +18,12 @@ bool clues::operator==(clues &i)
     return test;
 }
 
-string clues::getShortDescription()
+string clues::getDescription()
 {
     return description;
 }
 
-string clues::getLongDescription()
+string clues::getName()
 {
-    return " clues(s), " + description + ".\n";
+    return name;
 }

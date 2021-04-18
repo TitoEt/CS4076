@@ -1,5 +1,6 @@
 #ifndef ZORKUL_H_
 #define ZORKUL_H_
+#define YELLOW 12
 
 #include "character.h"
 #include "Room.h"
