@@ -1,8 +1,5 @@
-Definitions of template functions
 Operator overloading
 Abstract Classes
-Copy constructors( deep, shallow copy)
 Bit structures
-Advanced pre-processor directives - need to check, #define
 C++ Object construction sequence
 Inheritance
