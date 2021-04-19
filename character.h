@@ -20,6 +20,9 @@ public:
     void addClues(clues &clue);
     void addClues(clues *clue);
     Character(string description);
+
+protected:
+    bool cluesCollected();
 };
 
 #endif// CHARACTER_H_
