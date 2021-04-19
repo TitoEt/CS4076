@@ -1,10 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainWindow) , zork(new ZorkUL()) , character(new Character("Teran"))
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent) , ui(new Ui::MainWindow) , zork(new ZorkUL()) , character(new Character("Teran", "He's the detective"))
 {
     ui->setupUi(this);
-    character = new Character("Teran");
 
 /*    QPixmap p = QPixmap(":/images/images/my_cursor.png");
     QCursor c = QCursor(p, 0, 0);

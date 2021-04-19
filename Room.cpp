@@ -71,10 +71,4 @@ string Room::allCluesCollected(){
     {
         return "Keep searching!";
     }
-    
-}
-
-int main(){
-    cout << "Number of rooms to check : " << RoomNo << endl;
-    return 0;
 }

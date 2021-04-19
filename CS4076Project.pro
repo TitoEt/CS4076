@@ -12,16 +12,20 @@ SOURCES += \
     Room.cpp \
     character.cpp \
     clues.cpp \
+    entities.cpp \
     main.cpp \
     mainwindow.cpp \
+    suspect.cpp \
     zorkul.cpp
 
 HEADERS += \
     Room.h \
     character.h \
     clues.h \
+    entities.h \
     main.h \
     mainwindow.h \
+    suspect.h \
     zorkul.h
 
 FORMS += \

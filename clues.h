@@ -8,6 +8,7 @@ using namespace std;
 
 class clues
 {
+//<Rach> protected class
 protected:
     string description;
     string name;

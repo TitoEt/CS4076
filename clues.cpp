@@ -14,7 +14,6 @@ bool clues::operator==(clues &i)
     {
         test = 1;
     }
-
     return test;
 }
 
