@@ -4,9 +4,13 @@
 
 class suspect
 {
+
+private:
+    int* ptr;
+
 public:
     int suspecta, suspectb, suspectc, suspectd;
-    suspect(int a, int b, int c, int d) {suspecta = a; suspectb = b; suspectc = c; suspectd = d;};
+    suspect(int a = 0, int b= 0, int c = 0, int d = 0) {suspecta = a; suspectb = b; suspectc = c; suspectd = d;};
 
     suspect(const suspect &suspect); //{suspecta = suspect.suspecta; suspectb = suspect.suspectb; suspectc = suspect.suspectc; suspectd = suspect.suspectd;}
 

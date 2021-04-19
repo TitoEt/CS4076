@@ -8,11 +8,11 @@ clues::clues(string name, string description)
 
 bool clues::operator==(clues &i)
 {
-    int test = 0;
+    bool test = false;
 
     if (this->getDescription() == i.getDescription())
     {
-        test = 1;
+        test = true;
     }
     return test;
 }
