@@ -1,4 +1,6 @@
+#define RoomNo 5
 #include "Room.h"
+using namespace std;
 
 Room::Room(string name, string description) {
     this->name = name;
@@ -69,4 +71,10 @@ string Room::allCluesCollected(){
     {
         return "Keep searching!";
     }
+    
+}
+
+int main(){
+    cout << "Number of rooms to check : " << RoomNo << endl;
+    return 0;
 }
